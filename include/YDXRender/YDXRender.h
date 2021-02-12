@@ -2,7 +2,7 @@
 #include <string>
 #include <memory>
 #include "PipelineStateObject.h"
-#include "DXWindow.h"
+#include "DXFramework.h"
 namespace YXX
 {
 	enum class BindFlag
