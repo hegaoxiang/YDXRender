@@ -30,7 +30,7 @@ MainWndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
 	{
 		if (pSwapChain && wParam != SIZE_MINIMIZED)
 		{
-			DXDevice::Get().UpdateBackBuffer(MainBackBuf, (UINT)LOWORD(lParam), (UINT)HIWORD(lParam));
+			UpdateBackBuffer(DXDevice::Get(),MainBackBuf, (UINT)LOWORD(lParam), (UINT)HIWORD(lParam));
 		}
 	}
 		break;
@@ -128,7 +128,7 @@ void YXX::DXFramework::InitRender(HWND hWnd)
 {
 	auto& device = DXDevice::Get();
 	
-	auto [pDevice, pswapChain, pImmediateContext] = device.Init(hWnd);
+	auto [pDevice, pswapChain] = device.Init(hWnd);
 	pSwapChain = pswapChain;
 
 	pMainList = device.CreateCommandBuffer();

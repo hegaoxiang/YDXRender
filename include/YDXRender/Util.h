@@ -9,6 +9,7 @@
 #include <DirectXColors.h>
 #include <d3dcompiler.h>
 #include <algorithm>
+#include <set>
 //
 // บ๊ฯเนุ
 //
